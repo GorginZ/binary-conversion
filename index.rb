@@ -1,12 +1,11 @@
 #To convert integer to binary, start with the integer in question and divide it by 2 keeping notice of the quotient and the remainder. Continue dividing the quotient by 2 until you get a quotient of zero. Then just write out the remainders in the reverse order.
 
 
+def binary_converter(num)
 array = []
-num = 11
-
-
+num = num
 x = 1
-
+result = []
 while x <= num
 	array << x
 	puts 
@@ -23,17 +22,21 @@ end
 new_array.each do |a|
     a = num - a
     if a < 0
-        print "0"
+        result<<"0"
         a = num
     # end
 elsif a >= 0
-        print "1"
+        result<< "1"
     end
 num = a
 end
+result = result.join
+print result
+return result
 
+end
 
-
+binary_converter(0)
 # rem = 1
 # while rem > 0, a++ do
 # rem == num - new_array[a]
@@ -48,8 +51,6 @@ end
 
 
         
-
-puts "Done!"
 
 #problem for tomorrow is getting a one
 
